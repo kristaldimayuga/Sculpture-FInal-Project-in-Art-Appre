@@ -74,17 +74,37 @@ img {
     justify-content: space-between;
     height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 70px 8% 0;
 }
 
-#home p{
+#home p {
     font-size: 24px;
 }
 
 .hero {
     margin-top: 0px;
     max-width: 800px;
+}
+
+.hero p:first-of-type {
+    text-align: center;
+}
+
+.sculpture-clay {
+    position: relative;
+    display: flex;
+    left: -50px;
+}
+
+.letter {
+    height: 150px; /** eto aadjust para sa spacing sa taas at baba ng letter **/
+    max-width: 100px; /** eto aadjust para sa spacing between each letter **/
+}
+
+.sculpture-clay img {
+    max-width: 183.96px;   /** eto adjust para sa size ng letter **/
 }
 
 /* -------- HISTORY -------- */
@@ -101,13 +121,18 @@ img {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    padding: 100px 10% 0;
+    padding: 140px 10% 0;
 }
 
 .famous-header {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.famous-footer {
+    text-align: center;
+    opacity: 0.3;
 }
 
 .famous-bubble::after {
@@ -150,7 +175,6 @@ img {
 .third-famous {
     height: calc(100vh - 300px);
     width: 600px;
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
