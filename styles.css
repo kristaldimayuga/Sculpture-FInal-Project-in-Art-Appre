@@ -35,6 +35,7 @@ img {
     justify-content: space-between;
     align-items: center;
     z-index: 112;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-icon {
@@ -59,6 +60,10 @@ img {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+}
+
+.navbar a:hover{
+    color: #FF9900;
 }
 
 /* --------- HOME --------- */
@@ -92,13 +97,26 @@ img {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    padding: 70px 10% 0;
+    padding: 100px 10% 0;
 }
 
 .famous-header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.famous-bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(180deg,#FF9900 ,white);
+    z-index: -1;
 }
 
 #famous p {
@@ -154,17 +172,23 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 111;
+    z-index: 110;
     position: absolute;
     top: 0;
     left: 0;
     transition: all 1s ease;
 }
 
-.first-famous-img img:hover,
-.second-famous-img img:hover,
-.third-famous-img img:hover {
-    transform: scale(1.2);
+.first-famous-img img:first-of-type,
+.second-famous-img img:first-of-type,
+.third-famous-img img:first-of-type {
+    z-index: 111;
+}
+
+.first-famous-img img:first-of-type:hover,
+.second-famous-img img:first-of-type:hover,
+.third-famous-img img:first-of-type:hover {
+    opacity: 0;
 }
 
 .first-famous-text,
@@ -174,6 +198,7 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 10px 0 10px;
 }
 /* -------- MATERIALS -------- */
 #materials {
@@ -198,3 +223,5 @@ img {
     width: 100%;
     height: 100vh;
 }
+
+/* --------- ANIMATION ---------*/
