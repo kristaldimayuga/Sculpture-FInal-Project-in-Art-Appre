@@ -29,7 +29,7 @@ img {
     left: 0;
     width: 100%;
     padding: 20px 5%;
-    background: white;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +39,7 @@ img {
 
 .header.shadow {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: white;
 }
 
 .nav-icon {
@@ -54,6 +55,8 @@ img {
     font-weight: 600;
     cursor: default;
     display: flex;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
 .navbar a {
@@ -63,6 +66,9 @@ img {
     text-decoration: none;
     font-weight: 600;
     margin-left: 35px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(200ms * var(--i));
 }
 
 .navbar a:hover{
@@ -79,16 +85,27 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url("media/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     padding: 70px 8% 0;
     z-index: 1;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
 #home p {
     font-size: 24px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(300ms * var(--i))
 }
 
 .hero {
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero p:first-of-type {
@@ -99,15 +116,40 @@ img {
     position: relative;
     display: flex;
     left: -50px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(200ms * var(--i))
 }
 
 .letter {
     height: 150px; /** eto aadjust para sa spacing sa taas at baba ng letter **/
-    max-width: 100px; /** eto aadjust para sa spacing between each letter **/
+    max-width: 90px; /** eto aadjust para sa spacing between each letter **/
 }
 
 .sculpture-clay img {
     max-width: 183.96px;   /** eto adjust para sa size ng letter **/
+}
+
+.hero a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #00000080;
+}
+
+.start {
+    align-self: center;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(300ms * var(--i));
+}
+
+.start a {
+    transition: transform 300ms ease;
+    display: inline-block;
+}
+
+.start a:hover {
+    transform: translateY(6px);
 }
 
 /* -------- HISTORY -------- */
@@ -256,3 +298,55 @@ img {
 }
 
 /* --------- ANIMATION ---------*/
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
