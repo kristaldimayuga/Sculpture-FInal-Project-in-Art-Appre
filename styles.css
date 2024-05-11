@@ -34,6 +34,10 @@ img {
     justify-content: space-between;
     align-items: center;
     z-index: 112;
+    transition: box-shadow 0.3s ease;
+}
+
+.header.shadow {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -76,6 +80,7 @@ img {
     flex-direction: column;
     justify-content: center;
     padding: 70px 8% 0;
+    z-index: 1;
 }
 
 #home p {
@@ -83,7 +88,6 @@ img {
 }
 
 .hero {
-    margin-top: 0px;
     max-width: 800px;
 }
 
