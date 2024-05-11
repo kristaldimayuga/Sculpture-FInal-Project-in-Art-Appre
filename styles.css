@@ -178,6 +178,7 @@ img {
 .famous-footer {
     text-align: center;
     opacity: 0.3;
+    animation: blinking 2000ms ease infinite;
 }
 
 .famous-bubble::after {
@@ -348,5 +349,17 @@ img {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
     }
 }
