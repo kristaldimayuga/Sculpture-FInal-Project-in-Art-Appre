@@ -85,7 +85,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("media/bg.png");
+    background-image: url("media/heropic.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -205,7 +205,7 @@ img {
 }
 
 #famous h3 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     padding-top: 30px;
 }
