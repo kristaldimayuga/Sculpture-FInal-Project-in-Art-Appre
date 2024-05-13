@@ -115,15 +115,27 @@ img {
 .sculpture-clay {
     position: relative;
     display: flex;
-    left: -50px;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: calc(200ms * var(--i))
 }
 
-.letter {
-    height: 150px; /** eto aadjust para sa spacing sa taas at baba ng letter **/
+.letter-div {
+    height: 180px;
     max-width: 90px; /** eto aadjust para sa spacing between each letter **/
+    transition: transform 500ms ease-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.letter {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.letter-div:hover {
+    transform: translateY(-10px);
 }
 
 .sculpture-clay img {
@@ -231,7 +243,6 @@ img {
 .first-famous-img,
 .second-famous-img,
 .third-famous-img {
-    position: relative;
     position: relative;
     width: 450px;
     height: 450px;
