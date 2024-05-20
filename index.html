@@ -9,7 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header class="header">
@@ -73,53 +74,189 @@
             </section>
 
             <section id="history">
-                <h1>History</h1>
-                <p>The history of sculpture is vast and spans thousands of years, across various cultures and civilizations. Here's a broad overview:</p>
-
-                <h3>Prehistoric Sculpture<br>(c. 30,000 BCE - 3,000 BCE)</h3>
-                <p>Some of the earliest known sculptures are from the Paleolithic era, such as the Venus figurines found in Europe, which date back to around 30,000 BCE. </p>
-                <p>They often depicted humans and animals and served ritual or religious purposes.</p>
-                <i>venus of willendorf</i>
-
-                <h3>Ancient Near Eastern Sculpture <br>(c. 3500 BCE - 500 BCE)</h3>
-                <p>Civilizations like the Sumerians, Babylonians, Assyrians, and Persians created monumental sculptures in the form of relief carvings and statues. </p>
-                <p>These sculptures adorned palaces, temples, and tombs, depicting rulers, gods, and mythical creatures.</p>
-                <i>standing male and female worshiper</i>
-
-                <h3>Ancient Egyptian Sculpture <br>(c. 3100 BCE - 332 BCE)</h3>
-                <p>Egyptian sculpture is renowned for its monumental works, such as the Great Sphinx and the colossal statues of pharaohs.</p>
-                <p>These sculptures were often highly stylized and served religious and funerary purposes, with a focus on eternal preservation and the afterlife.</p>
-                <i>bust of nefertiti</i>
-
-                <h3>Ancient Roman Sculpture <br>(c. 500 BCE - 476 CE)</h3> 
-                <p>Roman sculpture was heavily influenced by Greek art but developed its own distinct style, characterized by realism and a focus on portraiture.</p> 
-                <p>Roman sculptors produced numerous statues of emperors, gods, and mythological figures, as well as decorative reliefs for architecture and public monuments.</p>
-                <i>laocoön and his sons</i>
-
-                <h3>Medieval Sculpture <br>(c. 500 CE - 1400 CE) </h3>
-                <p>During the Middle Ages, sculpture in Europe was primarily religious in nature, with works found in churches and cathedrals.</p>
-                <p>Sculptors created intricate reliefs, statues, and architectural decorations, often depicting biblical scenes, saints, and religious figures.</p>
-                <i>reliquary statue of sainte foy</i>
-
-                <h3>Renaissance Sculpture <br>(c. 14th - 17th centuries)</h3>
-                <p>The Renaissance saw a revival of classical art and a renewed interest in the human form.</p>
-                <p> Italian sculptors combined classical ideals with naturalism and emotion, depicting subjects ranging from religious figures to mythological heroes.</p>
-                <i>abduction of a sabine woman</i>
-
-                <h3>Baroque Sculpture <br>(c. 17th - 18th centuries)</h3>
-                <p>Baroque sculpture was characterized by dramatic movement, emotion, and intricate detail.</p>
-                <p> Sculptors created dynamic works for churches, palaces, and public spaces, often employing theatrical effects to engage viewers.</p>
-                <i>the rape of proserpina</i>
-
-                <h3>Neoclassical Sculpture <br>(late 18th - early 19th centuries)</h3>
-                <p>Neoclassicism revived the classical style of ancient Greece and Rome, emphasizing harmony, clarity, and idealized beauty.</p>
-                <p>Sculptors such as Antonio Canova and Jean-Antoine Houdon created elegant, restrained works inspired by classical antiquity.</p>
-                <i>psyche revived by cupid's kiss</i>
-                
-                <h3>Modern and Contemporary Sculpture <br>(late 19th century - present)</h3>
-                <p>In the modern era, sculpture has undergone numerous transformations, with artists exploring new materials, techniques, and concepts.</p>
-                <p>Movements like Cubism, Surrealism, Abstract Expressionism, and Minimalism have all influenced sculptural practices.</p>
-                <i>kaws: companion (passing through)</i>
+                <div class="history-header">
+                    <h1>History</h1>
+                    <p>The history of sculpture is vast and spans thousands of years, across various cultures and civilizations. Here's a broad overview:</p>
+                </div>
+                <div class="history-carousel" data-slides>
+                    <div class="history-card" data-active>
+                        <div class="card-time">
+                            <h3>Prehistoric Sculpture<br>(c. 30,000 BCE - 3,000 BCE)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Some of the earliest known sculptures are from the Paleolithic era, such as the Venus figurines found in Europe, which date back to around 30,000 BCE. </p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/prehistoric.png">
+                            </div>
+                            <div class="card-text">
+                                <p>They often depicted humans and animals and served ritual or religious purposes.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>venus of willendorf</p>
+                        </div>                     
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Ancient Near Eastern Sculpture <br>(c. 3500 BCE - 500 BCE)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Civilizations like the Sumerians, Babylonians, Assyrians, and Persians created monumental sculptures in the form of relief carvings and statues. </p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/near.png">
+                            </div>
+                            <div class="card-text">
+                                <p>These sculptures adorned palaces, temples, and tombs, depicting rulers, gods, and mythical creatures.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>standing male and female worshiper</p>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Ancient Egyptian Sculpture <br>(c. 3100 BCE - 332 BCE)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Egyptian sculpture is renowned for its monumental works, such as the Great Sphinx and the colossal statues of pharaohs.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/egyptian.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>These sculptures were often highly stylized and served religious and funerary purposes, with a focus on eternal preservation and the afterlife.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>bust of nefertiti</p>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Ancient Roman Sculpture <br>(c. 500 BCE - 476 CE)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Roman sculpture was heavily influenced by Greek art but developed its own distinct style, characterized by realism and a focus on portraiture.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/roman.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>Roman sculptors produced numerous statues of emperors, gods, and mythological figures, as well as decorative reliefs for architecture and public monuments.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>laocoön and his sons</p>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Medieval Sculpture <br>(c. 500 CE - 1400 CE) </h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>During the Middle Ages, sculpture in Europe was primarily religious in nature, with works found in churches and cathedrals.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/medieval.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>Sculptors created intricate reliefs, statues, and architectural decorations, often depicting biblical scenes, saints, and religious figures.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <i>reliquary statue of sainte foy</i>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Renaissance Sculpture <br>(c. 14th - 17th centuries)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>The Renaissance saw a revival of classical art and a renewed interest in the human form.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/renaissance.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>Italian sculptors combined classical ideals with naturalism and emotion, depicting subjects ranging from religious figures to mythological heroes.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>abduction of a sabine woman</p>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Baroque Sculpture <br>(c. 17th - 18th centuries)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Baroque sculpture was characterized by dramatic movement, emotion, and intricate detail.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/baroque.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p> Sculptors created dynamic works for churches, palaces, and public spaces, often employing theatrical effects to engage viewers.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            the rape of proserpina
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Neoclassical Sculpture <br>(late 18th - early 19th centuries)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Neoclassicism revived the classical style of ancient Greece and Rome, emphasizing harmony, clarity, and idealized beauty.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/neoclassical.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>Sculptors such as Antonio Canova and Jean-Antoine Houdon created elegant, restrained works inspired by classical antiquity.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>psyche revived by cupid's kiss</p>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="card-time">
+                            <h3>Modern and Contemporary Sculpture <br>(late 19th century - present)</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>In the modern era, sculpture has undergone numerous transformations, with artists exploring new materials, techniques, and concepts.</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="media/history/modern.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <p>Movements like Cubism, Surrealism, Abstract Expressionism, and Minimalism have all influenced sculptural practices.</p>
+                            </div>
+                        </div>
+                        <div class="card-title">
+                            <p>kaws: companion (passing through)</p>
+                        </div>
+                    </div>
+                </div>
+                    <button class="carousel-button prev" data-carousel-button="prev">
+                        <i class='bx bxs-chevron-left' ></i>
+                    </button>
+                    <button class="carousel-button next" data-carousel-button="next">
+                        <i class='bx bxs-chevron-right' ></i>
+                    </button>
             </section>
 
             <section id="famous" class="famous-bubble">

@@ -25,3 +25,24 @@ if (window.screen.width !== 1920 || window.screen.height !== 1080) {
         document.body.style.zoom = "90%";
     }
 }
+
+// History button
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('[data-carousel-button]');
+    const slidesContainer = document.querySelector('[data-slides]');
+    const slides = slidesContainer.querySelectorAll('.history-card');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
+            const activeSlide = slidesContainer.querySelector('[data-active]');
+            let newIndex = [...slides].indexOf(activeSlide) + offset;
+
+            if (newIndex < 0) newIndex = slides.length - 1;
+            if (newIndex >= slides.length) newIndex = 0;
+
+            slides[newIndex].dataset.active = true;
+            delete activeSlide.dataset.active;
+        });
+    });
+});
