@@ -9,6 +9,7 @@
 html {
     scroll-behavior: smooth !important;
     font-size: 16px;
+    cursor: url("media/cursor.png"), auto;
 }
 
 body {
@@ -59,6 +60,7 @@ img {
     display: flex;
     opacity: 0;
     animation: fadeIn 2s ease forwards;
+    cursor: url("media/cursor.png"), auto;
 }
 
 .navbar a {
@@ -71,6 +73,7 @@ img {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: calc(200ms * var(--i));
+    cursor: url("media/cursor.png"), auto;
 }
 
 .navbar a:hover{
@@ -161,6 +164,7 @@ img {
 .start a {
     transition: transform 300ms ease;
     display: inline-block;
+    cursor: url("media/cursor.png"), auto;
 }
 
 .start a:hover {
@@ -271,6 +275,7 @@ img {
     z-index: 10;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.5);
+    cursor: url("media/cursor.png"), auto;
 }
 
 .carousel-button > i {
@@ -347,6 +352,7 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: url("media/cursor.png"), auto;
 }
 
 .first-famous,
@@ -479,6 +485,7 @@ img {
     backdrop-filter: blur(1.25em);
     border-radius: 0.625em;
     padding: 1.875em 2.1875em;
+    cursor: url("media/cursor.png"), auto;
 }
 
 .cards .image {
@@ -637,7 +644,7 @@ input {
 .significance-content{
     flex: 2;
     margin-right: -6em;
-    margin-top: 2em;
+    margin-top: 1em;
     align-content: center;
     text-align: justify;
 }
