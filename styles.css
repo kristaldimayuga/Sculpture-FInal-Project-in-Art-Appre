@@ -86,7 +86,7 @@ img {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +178,7 @@ img {
     flex-direction: column;
     padding: 10em 10% 0;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     z-index: 1;
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1)), url('media/history bg.png');
@@ -269,7 +269,7 @@ img {
 
 .carousel-button {
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     border: none;
     background: none;
     z-index: 10;
@@ -300,20 +300,22 @@ img {
 #famous {
     position: relative;
     width: 100%;
-    justify-content: space-between;
     height: 100vh;
-    padding: 8.75em 10% 0;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .famous-header {
-    margin-top: 1em;
+    margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .famous-footer {
-    margin-top: 3em;
+    margin-top: 2em;
     text-align: center;
     opacity: 0.3;
     animation: blinking 2000ms ease infinite;
@@ -415,7 +417,7 @@ img {
 /* -------- MATERIALS -------- */
 #materials {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -481,7 +483,7 @@ img {
 .cards .card {
     position: relative;
     height: 100%;
-    background: #d9d9d9;
+    background: #FDF5E8;
     backdrop-filter: blur(1.25em);
     border-radius: 0.625em;
     padding: 1.875em 2.1875em;
@@ -594,15 +596,211 @@ input {
 }
 /* -------- SCULPTURES -------- */
 #sculptures {
+    position: relative;
     width: 100%;
     height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sculptures-header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0 0.5em 0;
+}
+
+.sculptures-header h1 {
+    font-size: 3em;
+}
+
+.sculptures-header p {
+    font-size: 1.25em;
+    animation: blinking 2000ms infinite;
+}
+
+.sculptures-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10em;
+    row-gap: 2em;
+    align-items: center;
+}
+
+.sculpture {
+    position: relative;
+    width: calc((100vw/5) - 1em);
+    height: calc((100vw/5) - 1em);
+    border-radius: 1em;
+    box-shadow: 0 0.625em 1em rgba(0, 0, 0, 45%);
+    padding: 0.5em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+
+.sculpture:first-of-type {
+    background: url('media/sculptures/pieta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture:nth-of-type(2) {
+    background: url('media/sculptures/sphynx.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture:nth-of-type(3) {
+    background: url('media/sculptures/liberty.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture:nth-of-type(4) {
+    background: url('media/sculptures/oblation.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture:nth-of-type(5) {
+    background: url('media/sculptures/ppm.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture:nth-of-type(6) {
+    background: url('media/sculptures/lapulapu.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.sculpture-text {
+    position: relative;
+    opacity: 0;
+    z-index: 3;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.625em;
+    padding: 0.3em;
+}
+
+.sculpture:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.sculpture:hover .sculpture-text {
+    opacity: 1;
+}
+
+.sculptures-bubble::before {
+    content: '';
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(180deg,#FF9900 ,white);
+    z-index: -1;
 }
 
 /* -------- FUN FACTS -------- */
 #funfacts {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
 }
+
+.funfacts-header {
+    text-align: center;
+}
+
+.funfacts-header p {
+    font-size: 1.5em;
+    animation: blinking 2000ms infinite;
+}
+
+.funfacts-header h3 {
+    font-size: 3em;
+}
+
+.funfacts-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffb342;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.funfact-image {
+    width: calc(100vh/3.5);
+    height: calc(100vh/3.5);
+    border-radius: 1.5em;
+    box-shadow: 0px 0px 0.625em rgba(0, 0, 0, 1);
+}
+
+.funfact-image:first-of-type {
+    background: url('media/funfact/ff1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.funfact-image:nth-of-type(2) {
+    background: url('media/funfact/ff2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.funfact-image:nth-of-type(3) {
+    background: url('media/funfact/ff3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.funfact-image:nth-of-type(4) {
+    background: url('media/funfact/ff4.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.funfact-image:nth-of-type(5) {
+    background: url('media/funfact/ff5.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.funfacts-text {
+    position: relative;
+    width: calc(100vw/2);
+}
+
+.funfact {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+}
+
+.funfact h3 {
+    font-size: 2em;
+}
+
+.funfact p {
+    font-size: 1.25em;
+}
+
 
 /* -------- SIGNIFICANCE -------- */
 #significance {
@@ -635,7 +833,7 @@ input {
 }
 
 .significance-header{
-    flex:1;
+    flex: 1;
     padding: 24em; 
     margin-left: -6em;
     margin-right: -6em;  
@@ -656,7 +854,7 @@ input {
 .members{
     margin-top: 2.5em;
     font-size: 0.8em;
-    text-align:right;
+    text-align: right;
 }
 
 /* --------- ANIMATION ---------*/
@@ -722,5 +920,14 @@ input {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Start with opacity 1 */
+    }
+    100% {
+        opacity: 0; /* Fade out */
     }
 }
