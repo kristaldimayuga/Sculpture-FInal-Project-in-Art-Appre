@@ -83,7 +83,7 @@ img {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,7 +174,7 @@ img {
     flex-direction: column;
     padding: 10em 10% 0;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     z-index: 1;
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1)), url('media/history bg.png');
@@ -265,7 +265,7 @@ img {
 
 .carousel-button {
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     border: none;
     background: none;
     z-index: 10;
@@ -295,20 +295,22 @@ img {
 #famous {
     position: relative;
     width: 100%;
-    justify-content: space-between;
     height: 100vh;
-    padding: 8.75em 10% 0;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .famous-header {
-    margin-top: 1em;
+    margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .famous-footer {
-    margin-top: 3em;
+    margin-top: 2em;
     text-align: center;
     opacity: 0.3;
     animation: blinking 2000ms ease infinite;
@@ -409,7 +411,7 @@ img {
 /* -------- MATERIALS -------- */
 #materials {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -824,7 +826,7 @@ input {
 }
 
 .significance-header{
-    flex:1;
+    flex: 1;
     padding: 24em; 
     margin-left: -6em;
     margin-right: -6em;  
@@ -845,7 +847,7 @@ input {
 .members{
     margin-top: 2.5em;
     font-size: 0.8em;
-    text-align:right;
+    text-align: right;
 }
 
 /* --------- ANIMATION ---------*/
