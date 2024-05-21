@@ -599,8 +599,57 @@ input {
 
 /* -------- SIGNIFICANCE -------- */
 #significance {
+    display: flex;
+    padding: 10em 10% 0;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
+    overflow: hidden;
+    background: url('media/significancebg.png');
+    background-size: cover;
+}
+
+#significance p {
+    font-size: 1.375em;
+}
+
+#significance i {
+    font-size: 1.5em;
+}
+
+#significance h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+#significance h3 {
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.significance-header{
+    flex:1;
+    padding: 24em; 
+    margin-left: -6em;
+    margin-right: -6em;  
+}
+
+.significance-content{
+    flex: 2;
+    margin-right: -6em;
+    margin-top: 2em;
+    align-content: center;
+    text-align: justify;
+}
+
+.closing{
+    margin-top: 2em;
+}
+
+.members{
+    margin-top: 2.5em;
+    font-size: 0.8em;
+    text-align:right;
 }
 
 /* --------- ANIMATION ---------*/
