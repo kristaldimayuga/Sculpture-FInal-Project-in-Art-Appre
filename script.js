@@ -21,7 +21,7 @@
 if (window.screen.width !== 1920 || window.screen.height !== 1080) {
     var currentZoom = document.documentElement.clientWidth / window.innerWidth * 100;
 
-    if (currentZoom !== 85) {
+    if (currentZoom !== 90) {
         document.body.style.zoom = "90%";
     }
 }
@@ -75,8 +75,8 @@ ScrollReveal({
 ScrollReveal().reveal('.history-header h1', {origin: 'left'})
 ScrollReveal().reveal('.history-header p', {origin: 'right'})
 ScrollReveal().reveal('.history-carousel')
-ScrollReveal().reveal('.carousel-button.prev', {delay: 300, origin: 'left'})
-ScrollReveal().reveal('.carousel-button.next', {delay: 300, origin: 'right'})
+ScrollReveal().reveal('.carousel-button.prev', {delay: 100, origin: 'left'})
+ScrollReveal().reveal('.carousel-button.next', {delay: 100, origin: 'right'})
 
 ScrollReveal().reveal('.famous-header', {origin: 'right'})
 ScrollReveal().reveal('.first-famous-img, .second-famous-img, .third-famous-img', {delay: 500, origin: 'top', interval: 300})
