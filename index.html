@@ -304,7 +304,7 @@
             <section id="materials">
                 <div class="materials-header">
                     <h1>Sculpting Materials</h1>
-                    <p>Any material that can be shaped in three-dimensions and are used for shaping, carving, or molding into desired forms.</p>
+                    <br><p>Any material that can be shaped in three-dimensions and are used for shaping, carving, or molding into desired forms.</p>
                 </div>
                 <div class="materials-content">
                     <input type="radio" name="slider" id="s1" checked>
@@ -381,6 +381,11 @@
                         </label>
                     </div>
                 </div>
+                
+                <div class="materials-footer">
+                    <p>(click on the cards to read info)</p>
+                </div>
+
                 <div class="custom-shape-divider-bottom-1716011064">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                         <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -393,44 +398,45 @@
             <section id="sculptures" class="sculptures-bubble">
                 <div class="sculptures-header">
                     <h1>Sculptures</h1>
+                    <p>click and hover on the pictures to reveal info</p>
                 </div>
                 <div class="sculptures-content">
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/pieta.jpg">
                         <div class="sculpture-text">
                             <h3>The Pietà</h3>
                             <p><b>Artist:</b> Michelangelo</p>
                             <p><b>Location:</b> St. Peter's Basilica, Vatican City</p>
                         </div>
                     </div>
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/sphynx.webp">
                         <div class="sculpture-text">
                             <h3>The Great Sphinx of Giza</h3>
                             <p><b>Artist:</b> Unknown</p>
                             <p><b>Location:</b> Giza, Egypt</p>
                         </div>
                     </div>
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/liberty.jpg">
                         <div class="sculpture-text">
                             <h3>The Statue of Liberty</h3>
                             <p><b>Artist:</b> Frédéric Auguste Bartholdi</p>
                             <p><b>Location:</b> Liberty Island, New York, USA</p>
                         </div>
                     </div>
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/oblation.jpg">
                         <div class="sculpture-text">
                             <h3>Oblation</h3>
                             <p><b>Artist:</b> Guillermo Tolentino</p>
                             <p><b>Location:</b> UP Diliman, Philippines</p>
                         </div>
                     </div>
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/peoplepower.jpg">
                         <div class="sculpture-text">
                             <h3>People Power Monument</h3>
                             <p><b>Artist:</b> Eduardo Castrillo</p>
                             <p><b>Location:</b> EDSA, Quezon City, Philippines</p>
                         </div>
                     </div>
-                    <div class="sculpture">
+                    <div class="sculpture" data-image="media/sculptures/lapu-lapu.jpg">
                         <div class="sculpture-text">
                             <h3>Lapu-Lapu Shrine</h3>
                             <p><b>Artist:</b> Juan Sajid Imao</p>
@@ -439,6 +445,12 @@
                     </div>
                 </div>
             </section>
+            
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            
             <section id="funfacts">
                 <div class="funfacts-header">
                     <h3>Fun Facts About Sculpture</h3>

@@ -47,6 +47,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+var modal = document.getElementById('imageModal');
+var modalImg = document.getElementById('modalImage');
+var closeBtn = document.getElementsByClassName('close')[0];
+
+document.querySelectorAll('.sculpture').forEach(function(sculpture) {
+    sculpture.addEventListener('click', function() {
+        var imgSrc = sculpture.getAttribute('data-image');
+        modal.style.display = 'block';
+        modalImg.src = imgSrc;
+        document.body.style.overflow = 'hidden'; //paramadisable yung scolling
+    });
+});
+
+closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // enable scrolling
+});
+
+
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // enable scrolling
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const funfactImages = document.querySelectorAll('.funfact-image');
 
@@ -66,34 +93,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-ScrollReveal({
-    reset: true,
-    distance: '60px',
-    duration: 2500,
-})
-
-ScrollReveal().reveal('.history-header h1', {origin: 'left'})
-ScrollReveal().reveal('.history-header p', {origin: 'right'})
-ScrollReveal().reveal('.history-carousel')
-ScrollReveal().reveal('.carousel-button.prev', {delay: 100, origin: 'left'})
-ScrollReveal().reveal('.carousel-button.next', {delay: 100, origin: 'right'})
-
-ScrollReveal().reveal('.famous-header', {origin: 'right'})
-ScrollReveal().reveal('.first-famous-img, .second-famous-img, .third-famous-img', {delay: 500, origin: 'top', interval: 300})
-ScrollReveal().reveal('.first-famous-text, .second-famous-text, .third-famous-text', {delay: 500, origin: 'bottom', interval: 300})
-ScrollReveal().reveal('.famous-footer', {delay: 500, origin: 'left'})
-
-ScrollReveal().reveal('.materials-header h1', {origin: 'left'})
-ScrollReveal().reveal('.materials-header p', {origin: 'right'})
-ScrollReveal().reveal('.materials-content', {delay: 500, origin: 'bottom'})
-
-ScrollReveal().reveal('.sculptures-header h1', {origin: 'right'})
-ScrollReveal().reveal('.sculpture', {origin: 'bottom', interval: 300})
-
-ScrollReveal().reveal('.funfacts-header h3', {origin: 'right'})
-ScrollReveal().reveal('.funfacts-header p', {origin: 'left'})
-ScrollReveal().reveal('.funfact-image', {origin: 'top', interval: 300})
-
-ScrollReveal().reveal('.significance-header h1', {origin: 'top'})
-ScrollReveal().reveal('.significance-header p', {origin: 'left'})
-ScrollReveal().reveal('.significance-content p, h3', {delay: 500, origin: 'right', interval: 500})
