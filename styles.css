@@ -878,7 +878,7 @@ input {
 }
 
 #significance p {
-    font-size: 1.375em;
+    font-size: 1.2em;
 }
 
 #significance i {
@@ -898,14 +898,14 @@ input {
 
 .significance-header{
     flex: 1;
-    padding: 24em; 
+    padding: 22em; 
     margin-left: -6em;
-    margin-right: -6em;  
+    margin-right: -10em;  
 }
 
 .significance-content{
     flex: 2;
-    margin-right: -6em;
+    margin-right: -8em;
     margin-top: 1em;
     align-content: center;
     text-align: justify;
